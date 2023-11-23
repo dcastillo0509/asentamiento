@@ -7,7 +7,7 @@ import plotly.graph_objs as go
 
 
 
-app=Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+
 #Base de datos
 from pymongo.mongo_client import MongoClient
 
@@ -44,12 +44,7 @@ centro=dbc.Container([#crea la variable inferior y en ella un Container
     ])
 ])
 
-@app.callback(
-    [Output('asentamiento', 'figure'),
-     Output('distancia-actual', 'children'),
-     Output('alerta-texto', 'children')],
-    [Input('interval-component', 'n_intervals')]
-)
+
 def consultar(n):
     
     # Utilizar la variable global data_dist
